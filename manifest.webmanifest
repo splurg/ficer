@@ -1,15 +1,15 @@
 {
-  "name": "ficker pwa",
-  "short_name": "ficker pwa",
-  "description": "ficker pwa - some demo of tooling",
-  "scope": "/ficker/",
-  "start_url": "/ficker/",
+  "name": "ficer pwa",
+  "short_name": "ficer pwa",
+  "description": "ficer pwa - some demo of tooling",
+  "scope": "/ficer/",
+  "start_url": "/ficer/",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone", 
   "icons": [
       {
-        "src": "/ficker/img/icon.png",
+        "src": "/ficer/img/icon.png",
         "type": "image/png",
         "sizes": "700x700"
       }

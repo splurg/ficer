@@ -1,4 +1,4 @@
-var GHPATH = '/ficker';
+var GHPATH = '/ficer';
 
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register(
