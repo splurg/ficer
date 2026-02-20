@@ -1,4 +1,4 @@
-var GHPATH = '/github-page-pwa';
+var GHPATH = '/ficker';
 
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register(
