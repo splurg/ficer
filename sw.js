@@ -1,14 +1,14 @@
 // Change this to your repository name
 var GHPATH = '/ficer';
- 
+
 // Choose a different app prefix name
 var APP_PREFIX = 'ficer_';
 
-var VERSION = 'version_002';
-var URLS = [    
+var VERSION = 'version_003';
+var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
-  `ficer/css/styles.css`,
+  `${GHPATH}/css/style.css`,
   `${GHPATH}/img/icon.png`,
   `${GHPATH}/js/app.js`
 ]
@@ -18,10 +18,10 @@ self.addEventListener('fetch', function (e) {
   console.log('Fetch request : ' + e.request.url);
   e.respondWith(
     caches.match(e.request).then(function (request) {
-      if (request) { 
+      if (request) {
         console.log('Responding with cache : ' + e.request.url);
         return request
-      } else {       
+      } else {
         console.log('File is not cached, fetching : ' + e.request.url);
         return fetch(e.request)
       }
@@ -47,7 +47,7 @@ self.addEventListener('activate', function (e) {
       cacheWhitelist.push(CACHE_NAME);
       return Promise.all(keyList.map(function (key, i) {
         if (cacheWhitelist.indexOf(key) === -1) {
-          console.log('Deleting cache : ' + keyList[i] );
+          console.log('Deleting cache : ' + keyList[i]);
           return caches.delete(keyList[i])
         }
       }))
